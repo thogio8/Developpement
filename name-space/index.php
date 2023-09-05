@@ -12,8 +12,8 @@ $om = new Equipe("OM", "Marcelino", "1899");
 $ligue1->ajouterEquipe($psg);
 $ligue1->ajouterEquipe($om);
 echo PHP_EOL;
-echo $ligue1->getNombreEquipes().PHP_EOL;
+echo $ligue1->getNombreEquipes() . PHP_EOL;
 
 foreach ($ligue1->getEquipes() as $equipe){
-    echo $equipe->getNom().PHP_EOL;
+    echo $equipe->getNom() . PHP_EOL;
 }
