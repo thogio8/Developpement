@@ -1,5 +1,6 @@
 <?php
 
+namespace App;
 class Equipe{
     private string $nom;
     private int $nombreLikes;

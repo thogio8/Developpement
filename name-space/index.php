@@ -1,8 +1,5 @@
 <?php
 
-require_once "./src/Championnat.php";
-require_once "./src/Equipe.php";
-
 $ligue1 = new Championnat("Ligue 1");
 echo $ligue1->getNom();
 

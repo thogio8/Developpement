@@ -1,7 +1,6 @@
 <?php
 
-require_once "./src/Equipe.php";
-
+namespace App;
 class Championnat{
     private string $nom;
     /**
