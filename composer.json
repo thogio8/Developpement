@@ -1,0 +1,11 @@
+{
+    "name": "gioanat/php-namespace",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Thomas Gioana",
+            "email": "thomas.gioana@gmail.com"
+        }
+    ],
+    "require": {}
+}
