@@ -3,6 +3,7 @@
 require "./vendor/autoload.php";
 use App\Equipe;
 use App\Championnat;
+use App\dossier1\Personne;
 
 $ligue1 = new Championnat("Ligue 1");
 echo $ligue1->getNom();
@@ -18,3 +19,5 @@ echo $ligue1->getNombreEquipes() . PHP_EOL;
 foreach ($ligue1->getEquipes() as $equipe){
     echo $equipe->getNom() . PHP_EOL;
 }
+
+$personne = new Personne("toto");
