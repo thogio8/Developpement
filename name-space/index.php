@@ -1,12 +1,14 @@
 <?php
 
 require "./vendor/autoload.php";
+use App\Equipe;
+use App\Championnat;
 
-$ligue1 = new App\Championnat("Ligue 1");
+$ligue1 = new Championnat("Ligue 1");
 echo $ligue1->getNom();
 
-$psg = new App\Equipe("PSG", "Luis Enrique", "1970");
-$om = new App\Equipe("OM", "Marcelino", "1899");
+$psg = new Equipe("PSG", "Luis Enrique", "1970");
+$om = new Equipe("OM", "Marcelino", "1899");
 
 $ligue1->ajouterEquipe($psg);
 $ligue1->ajouterEquipe($om);
