@@ -1,6 +1,9 @@
 <?php
 
 namespace App;
+
+use League\Csv\Reader;
+
 class Championnat{
     private string $nom;
     /**
@@ -23,6 +26,23 @@ class Championnat{
      */
     public function ajouterEquipe(Equipe $equipe) : void{
         $this->equipes[] = $equipe;
+    }
+
+    /**
+     * @param string $path
+     * @return void
+     */
+    public function ajouterEquipesCSV(string $path) : void{
+        $csv = Reader::createFromPath($path, 'r');
+        $csv->setHeaderOffset(0);
+        $csv->setDelimiter(";");
+
+        $records = $csv->getRecords();
+
+        foreach($records as $record){
+            $equipe = new Equipe($record["Nom"], $record["Entraineur"], $record["Annee"]);
+            $this->equipes[] = $equipe;
+        }
     }
 
     /**
