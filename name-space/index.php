@@ -20,4 +20,6 @@ foreach ($ligue1->getEquipes() as $equipe){
     echo $equipe->getNom() . PHP_EOL;
 }
 
+dump($ligue1);
+
 $personne = new Personne("toto");
